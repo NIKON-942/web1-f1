@@ -1,0 +1,168 @@
+.blue {
+    background-color: #cbd7f0;
+}
+
+.orange {
+    background-color: #f9eada;
+}
+
+.green {
+    background-color: #eaf1de;
+}
+
+.white {
+    background-color: white;
+}
+
+.blue, .green, .orange, .white, body {
+    border: 1px solid black;
+}
+
+.content_div {
+    padding: 5px;
+}
+
+.div_grid {
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 1vh 1vw;
+    box-sizing: border-box;
+    min-height: 700px;
+    min-width: 1250px;
+}
+
+.test {
+    background-color: cornflowerblue;
+    border: 2px;
+    border-style: dashed;
+    border-color: black;
+}
+
+#page {
+    grid-template-rows: 8em 1fr 8em;  
+    min-height: 97vh;
+    height: auto;
+}
+
+#row_container {
+    grid-template-columns: 13em 2.5fr minmax(auto, 1fr);
+}
+
+#middle_column {
+    grid-template-rows: auto 1fr;
+}
+
+#right_column {
+    grid-template-rows: 1fr auto;
+}
+
+#block1, #block7 {
+    display: grid;
+    align-items: center;
+}
+
+#x, #y {
+    padding: 0 1em;
+    margin: 1em;
+    width: fit-content;
+    align-content: center;
+}
+
+#y {
+    text-align: center;
+    justify-self: right;
+}
+
+#block1 {
+    grid-template-columns: 1fr 1fr;
+}
+
+#block1 p {
+    margin: 2em;
+    justify-self: right;
+}
+
+#block7 {
+    grid-template-columns: 1fr 1fr;
+}
+
+#block7 p {
+    margin: 2em;
+    justify-self: left;
+}
+
+#block2 {
+    align-content: center;
+    justify-items: center;
+}
+
+#block2 ul {
+    padding: 0;
+}
+
+#block2 li {
+    list-style: none;
+}
+
+#block4 {
+    align-content: center;
+    justify-items: center;
+}
+
+#block4 ol {
+    padding: 0 1em 0 2em;
+}
+
+#block3 {
+    min-height: 3em;
+    align-content: center;
+    justify-items: center;
+}
+
+#block3 h2 {
+    margin: 0 1em;
+}
+
+#block6 {
+    min-height: 4em;
+}
+
+#block6 {
+    align-content: center;
+    justify-items: center;
+}
+
+#block6 ul {
+    padding: 0;
+}
+
+#block5_main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+#block5 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.teams_image {
+    width: 200px;
+}
+
+.driver_image {
+    max-width: 100%;
+}
+
+#main_block {
+    padding: 1em;
+    align-content: center;
+    justify-items: center;
+}
