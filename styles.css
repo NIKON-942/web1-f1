@@ -32,33 +32,36 @@ body {
     padding: 0;
     margin: 1vh 1vw;
     box-sizing: border-box;
-    min-height: 700px;
+    min-height: 800px;
     min-width: 1250px;
 }
 
-.test {
-    background-color: cornflowerblue;
-    border: 2px;
-    border-style: dashed;
-    border-color: black;
+#page, #row_container, #middle_column, #right_column,
+#block2, #block3, #block4, #block6 {
+    display: grid;
 }
 
 #page {
-    grid-template-rows: 8em 1fr 8em;  
+    grid-template-rows: 8em 1fr 8em;
     min-height: 97vh;
     height: auto;
 }
 
 #row_container {
-    grid-template-columns: 13em 2.5fr minmax(auto, 1fr);
+    grid-template-columns: 13em 2.5fr minmax(0, 1fr);
+    grid-row: 2;
 }
 
 #middle_column {
     grid-template-rows: auto 1fr;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 #right_column {
     grid-template-rows: 1fr auto;
+    grid-column: 3;
+    grid-row: 1;
 }
 
 #block1, #block7 {
@@ -75,30 +78,34 @@ body {
 
 #y {
     text-align: center;
-    justify-self: right;
+    justify-self: end;
 }
 
 #block1 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
+    grid-row: 1;
 }
 
 #block1 p {
     margin: 2em;
-    justify-self: right;
+    justify-self: end;
 }
 
 #block7 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
+    grid-row: 3;
 }
 
 #block7 p {
     margin: 2em;
-    justify-self: left;
+    justify-self: start;
 }
 
 #block2 {
     align-content: center;
     justify-items: center;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 #block2 ul {
@@ -112,6 +119,7 @@ body {
 #block4 {
     align-content: center;
     justify-items: center;
+    grid-row: 1;
 }
 
 #block4 ol {
@@ -122,6 +130,7 @@ body {
     min-height: 3em;
     align-content: center;
     justify-items: center;
+    grid-row: 1;
 }
 
 #block3 h2 {
@@ -130,11 +139,9 @@ body {
 
 #block6 {
     min-height: 4em;
-}
-
-#block6 {
     align-content: center;
     justify-items: center;
+    grid-row: 2;
 }
 
 #block6 ul {
@@ -143,26 +150,46 @@ body {
 
 #block5_main {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto;
     align-items: center;
+    grid-row: 2;
 }
 
 #block5 {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2.5fr 1fr;
     align-items: center;
+    grid-row: 2;
 }
 
 .teams_image {
     width: 200px;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .driver_image {
+    width: 300px;
     max-width: 100%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+.left_image {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.right_image {
+    grid-column: 3;
+    grid-row: 1;
 }
 
 #main_block {
     padding: 1em;
     align-content: center;
     justify-items: center;
+    grid-column: 2;
+    grid-row: 1;
 }
